@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genty studio product</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Welcome to Genty's Videos</h1>
+    <p>The Genty's studio presents!</p>
+  </header>
+
+  <section class="video-section">
+    <video controls>
+      <source src="red vs green.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <section class="description">
+    <p>This video showcases the beauty and the art of stick characters fighting!</p>
+  </section>
+
+  
+
+ <!-- This is my optional part -->
+ <section class="video-section">
+    <video id="video" controls>
+      <source src="Birthday present renewed.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <!-- I added this shit -->
+    <section class="description">
+        <p>This video was a thoughtful gift created by the Genty's studio!</p>
+      </section>
+
+
+
+    <button id="playButton">Play</button>
+  </section>
+  
+  <script>
+    const video = document.getElementById('video');
+    const playButton = document.getElementById('playButton');
+  
+    playButton.addEventListener('click', () => {
+      if (video.paused) {
+        video.play();
+        playButton.textContent = 'Pause';
+      } else {
+        video.pause();
+        playButton.textContent = 'Play';
+      }
+    });
+  </script>
+  
+  <footer class="footer">
+    <p>&copy; 2024 Genty. All rights reserved.</p>
+  </footer>
+
+
+
+</body>
+</html>
